@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef35bcb7-96b7-4cdf-a90d-4e9e84c4f496" name="Changes" comment="Conflicts fix">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="ef35bcb7-96b7-4cdf-a90d-4e9e84c4f496" name="Changes" comment="Removed cached files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +72,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Android App.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -178,11 +180,50 @@
       <option name="project" value="LOCAL" />
       <updated>1739730156456</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed initial commit">
+      <option name="closed" value="true" />
+      <created>1739730560519</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739730560519</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Removed cached files">
+      <option name="closed" value="true" />
+      <created>1739730710502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739730710502</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Conflicts fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Conflicts fix" />
+    <MESSAGE value="Fixed initial commit" />
+    <MESSAGE value="Removed cached files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed cached files" />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.stetsiuk.modal_component.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1739730563290" />
+          </value>
+        </entry>
+        <entry key="com.stetsiuk.modalcomponentjetpackcompose">
+          <value>
+            <CheckInfo lastCheckTimestamp="1739730561114" />
+          </value>
+        </entry>
+        <entry key="com.stetsiuk.modalcomponentjetpackcompose.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1739730561119" />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
