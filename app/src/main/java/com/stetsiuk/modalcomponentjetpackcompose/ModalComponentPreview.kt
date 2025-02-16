@@ -1,4 +1,4 @@
-package com.stetsiuk.modal_component
+package com.stetsiuk.modalcomponentjetpackcompose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -24,6 +24,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import com.stetsiuk.modal_component.ModalComponent
+import com.stetsiuk.modal_component.ModalComponentState
+import com.stetsiuk.modal_component.ProvideModalComponentHost
+import com.stetsiuk.modal_component.rememberModalComponentState
 import kotlinx.coroutines.launch
 
 @Preview
@@ -52,10 +56,10 @@ internal fun ModalContentPreview1() {
                         .offset {
                             IntOffset(
                                 x = 0,
-                                y = (200.dp - (200.dp * state.visibilityRatioState.value)).roundToPx()
+                                y = (200.dp - (200.dp * state.visibilityRatio)).roundToPx()
                             )
                         }
-                        .alpha(state.visibilityRatioState.value),
+                        .alpha(state.visibilityRatio),
                     painter = painterResource(R.drawable.image1),
                     contentDescription = "",
                     contentScale = ContentScale.FillWidth,
@@ -99,10 +103,10 @@ internal fun ModalContentPreview2() {
                             .offset {
                                 IntOffset(
                                     x = 0,
-                                    y = (200.dp - (200.dp * state.visibilityRatioState.value)).roundToPx()
+                                    y = (200.dp - (200.dp * state.visibilityRatio)).roundToPx()
                                 )
                             }
-                            .alpha(state.visibilityRatioState.value),
+                            .alpha(state.visibilityRatio),
                         painter = painterResource(R.drawable.image1),
                         contentDescription = "",
                         contentScale = ContentScale.FillWidth,
@@ -140,12 +144,12 @@ private fun Controllers(
                 onClick = { scope.launch { state.show() } }
             ) { Text("Show") }
             Spacer(Modifier.weight(1f))
-            Text("${(state.visibilityRatioState.value * 100f).toInt()}%")
+            Text("${(state.visibilityRatio * 100f).toInt()}%")
         }
         if (showProgress) {
             Slider(
                 modifier = Modifier.fillMaxWidth(),
-                value = state.visibilityRatioState.value,
+                value = state.visibilityRatio,
                 onValueChange = {
                     scope.launch { state.snapTo(it) }
                 }
