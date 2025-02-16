@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Modal Component Jetpack Compose"
 include(":app")
- 
+include(":modal-component")
