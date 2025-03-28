@@ -62,7 +62,7 @@ publishing {
                 from(components["release"])
                 groupId = "com.github.vasyl-stetsiuk"
                 artifactId = "modal-component"
-                version = "1.0.2"
+                version = "1.0.3"
             }
         }
     }
