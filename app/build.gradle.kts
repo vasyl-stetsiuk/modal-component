@@ -40,7 +40,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":modal-component"))
+    // implementation(project(":modal-component"))
+    implementation("com.github.vasyl-stetsiuk:modal-component:1.0.3")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
