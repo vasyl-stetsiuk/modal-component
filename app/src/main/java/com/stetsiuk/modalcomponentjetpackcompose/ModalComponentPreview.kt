@@ -169,7 +169,7 @@ private fun Controllers2(
         horizontalArrangement = Arrangement.SpaceAround
     ) {
         Button(
-            onClick = { scope.launch { states.lastOrNull { it.isVisible }?.hide() } }
+            onClick = { scope.launch { states.lastOrNull { it.isVisible && it.visibilityRatio == 1f }?.hide() } }
         ) { Text("Hide") }
         Button(
             onClick = { scope.launch { states.firstOrNull { !it.isVisible }?.show() } }
