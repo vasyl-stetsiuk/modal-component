@@ -60,7 +60,7 @@ publishing {
         register<MavenPublication>("release") {
             afterEvaluate {
                 from(components["release"])
-                groupId = "com.github.vasyl-stetsiuk"
+                groupId = "com.github.stetsiuk"
                 artifactId = "modal-component"
                 version = "1.0.1"
             }
