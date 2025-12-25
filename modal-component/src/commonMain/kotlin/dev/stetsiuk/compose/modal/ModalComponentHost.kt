@@ -1,6 +1,5 @@
-package com.stetsiuk.modal_component
+package dev.stetsiuk.compose.modal
 
-import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -13,7 +12,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.backhandler.BackHandler
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
@@ -27,6 +28,7 @@ internal data class Params(
     val tint: Color
 )
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun ProvideModalComponentHost(
     modifier: Modifier = Modifier,

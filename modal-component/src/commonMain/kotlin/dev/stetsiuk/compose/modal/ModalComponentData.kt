@@ -1,15 +1,16 @@
-package com.stetsiuk.modal_component
+package dev.stetsiuk.compose.modal
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import java.util.UUID
+import kotlin.uuid.ExperimentalUuidApi
+import kotlin.uuid.Uuid
 
-data class ModalComponentData(
+data class ModalComponentData @OptIn(ExperimentalUuidApi::class) constructor(
     val state: ModalComponentState,
-    val id: String = UUID.randomUUID().toString(),
+    val id: String = Uuid.random().toString(),
     val dismissOnBackPress: Boolean = true,
     val dismissOnClickOutside: Boolean = true,
     val onDismissRequest: () -> Unit,

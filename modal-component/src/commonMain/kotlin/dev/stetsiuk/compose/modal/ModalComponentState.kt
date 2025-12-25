@@ -1,4 +1,4 @@
-package com.stetsiuk.modal_component
+package dev.stetsiuk.compose.modal
 
 import androidx.annotation.FloatRange
 import androidx.compose.animation.core.Animatable

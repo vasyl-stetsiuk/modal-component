@@ -1,4 +1,4 @@
-package com.stetsiuk.modal_component
+package dev.stetsiuk.compose.modal
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.material3.Surface
@@ -12,9 +12,11 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import java.util.UUID
+import kotlin.uuid.ExperimentalUuidApi
+import kotlin.uuid.Uuid
 
 // Surface params
+@OptIn(ExperimentalUuidApi::class)
 @Composable
 fun ModalComponent(
     state: ModalComponentState,
@@ -32,7 +34,7 @@ fun ModalComponent(
     content: @Composable () -> Unit,
 ) {
     val host = LocalModalComponentHostState.current
-    val id = rememberSaveable { UUID.randomUUID().toString() }
+    val id = rememberSaveable { Uuid.random().toString() }
     val hostContent = @Composable {
         Surface(
             modifier = modifier,
