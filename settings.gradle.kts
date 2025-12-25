@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Modal"
 //include(":app")
+include(":composeApp")
 include(":modal-component")
