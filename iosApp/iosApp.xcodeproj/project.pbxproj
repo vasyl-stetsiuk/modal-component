@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		2AE7F823C743E419428653EE /* TestComposeMultiplatformApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestComposeMultiplatformApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE7F823C743E419428653EE /* TestComposeModalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestComposeModalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -59,7 +59,7 @@
 		70071E7F7F50D55BF0C671E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2AE7F823C743E419428653EE /* TestComposeMultiplatformApp.app */,
+				2AE7F823C743E419428653EE /* TestComposeModalApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = 2AE7F823C743E419428653EE /* TestComposeMultiplatformApp.app */;
+			productReference = 2AE7F823C743E419428653EE /* TestComposeModalApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

@@ -28,6 +28,9 @@ import dev.stetsiuk.compose.modal.ProvideModalComponentHost
 import dev.stetsiuk.compose.modal.rememberModalComponentState
 import kotlinx.coroutines.launch
 import modal.composeapp.generated.resources.Res
+import modal.composeapp.generated.resources.image1
+import modal.composeapp.generated.resources.image2
+import modal.composeapp.generated.resources.image3
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 

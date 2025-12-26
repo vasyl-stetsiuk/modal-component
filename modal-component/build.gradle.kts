@@ -26,13 +26,14 @@ kotlin {
         }
     }
 
-    js(IR) {
-        browser()
-    }
+    // Temporarily disabled due to binaryen dependency issues
+    // js(IR) {
+    //     browser()
+    // }
 
-    wasmJs {
-        browser()
-    }
+    // wasmJs {
+    //     browser()
+    // }
 
     iosArm64()
     iosX64()
@@ -46,12 +47,12 @@ kotlin {
         val desktopMain by getting {
             dependencies {}
         }
-        val jsMain by getting {
-            dependencies {}
-        }
-        val wasmJsMain by getting {
-            dependencies {}
-        }
+        // val jsMain by getting {
+        //     dependencies {}
+        // }
+        // val wasmJsMain by getting {
+        //     dependencies {}
+        // }
         iosMain.dependencies {}
         commonMain.dependencies {
 
@@ -62,6 +63,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(libs.compose.backhandler)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

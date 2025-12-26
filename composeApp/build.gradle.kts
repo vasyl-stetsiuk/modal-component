@@ -28,17 +28,18 @@ kotlin {
     }
     
     jvm()
-    
-    js {
-        browser()
-        binaries.executable()
-    }
-    
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-        binaries.executable()
-    }
+
+    // Temporarily disabled due to binaryen dependency issues
+    // js {
+    //     browser()
+    //     binaries.executable()
+    // }
+
+    // @OptIn(ExperimentalWasmDsl::class)
+    // wasmJs {
+    //     browser()
+    //     binaries.executable()
+    // }
     
     sourceSets {
         androidMain.dependencies {
