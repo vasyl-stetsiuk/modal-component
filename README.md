@@ -17,7 +17,13 @@ A flexible and customizable modal component library for Compose Multiplatform wi
 
 ## Preview
 
-![Modal Preview](media/preview.gif)
+https://github.com/user-attachments/assets/preview.mp4
+
+<details>
+<summary>Alternative: GIF version (4.5 MB)</summary>
+
+![Modal Preview](media/preview-optimized.gif)
+</details>
 
 ## Features
 
