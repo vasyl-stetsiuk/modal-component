@@ -38,7 +38,7 @@ Add the dependency to your `build.gradle.kts`:
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation("dev.stetsiuk:compose-modal:1.0.1")
+            implementation("dev.stetsiuk:compose-modal:1.0.2")
         }
     }
 }
