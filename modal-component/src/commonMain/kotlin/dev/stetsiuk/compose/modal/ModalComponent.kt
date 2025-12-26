@@ -53,7 +53,7 @@ fun ModalComponent(
             id = id,
             state = state,
             content = hostContent,
-            configs = { hostConfigs },
+            configs = hostConfigs,
             onDismissRequest = onDismissRequest,
             dismissOnClickOutside = dismissOnClickOutside,
             dismissOnBackPress = dismissOnBackPress

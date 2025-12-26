@@ -14,7 +14,7 @@ data class ModalComponentData @OptIn(ExperimentalUuidApi::class) constructor(
     val dismissOnBackPress: Boolean = true,
     val dismissOnClickOutside: Boolean = true,
     val onDismissRequest: () -> Unit,
-    val configs: () -> ModalComponentHostConfig = { ModalComponentHostConfig.default() },
+    val configs: ModalComponentHostConfig = ModalComponentHostConfig.default(),
     val content: @Composable () -> Unit,
 )
 
@@ -29,8 +29,8 @@ data class ModalComponentHostConfig(
             return ModalComponentHostConfig(
                 contentAlignment = Alignment.BottomCenter,
                 backgroundBlur = 12.dp,
-                backgroundTint = Color.Black.copy(0.4f),
-                backgroundScaleRatio = 0.95f,
+                backgroundTint = Color.Black.copy(0.1f),
+                backgroundScaleRatio = 1.05f,
             )
         }
     }

@@ -25,7 +25,7 @@ import androidx.compose.ui.util.lerp
 internal data class Params(
     val blur: Dp,
     val scale: Float,
-    val tint: Color
+    val tint: Color,
 )
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -39,12 +39,12 @@ fun ProvideModalComponentHost(
         LocalModalComponentHostState provides state
     ) {
         val params = state.values.map { item ->
-            val configs = item.configs()
+            val (_, backgroundBlur, backgroundTint, backgroundScaleRatio) = item.configs
 
             val animatedItemRatio = item.state.visibilityRatioState.value
-            val blur = configs.backgroundBlur * animatedItemRatio
-            val scale = lerp(1f, configs.backgroundScaleRatio, animatedItemRatio)
-            val tint = configs.backgroundTint.copy(configs.backgroundTint.alpha * animatedItemRatio)
+            val blur = backgroundBlur * animatedItemRatio
+            val scale = lerp(1f, backgroundScaleRatio, animatedItemRatio)
+            val tint = backgroundTint.copy(backgroundTint.alpha * animatedItemRatio)
             Params(blur, scale, tint)
         }
         val contentBlur = params.map { it.blur.value }.sum().dp
@@ -55,20 +55,22 @@ fun ProvideModalComponentHost(
         @Composable
         fun Items(
             items: List<ModalComponentData>,
-            index: Int
+            index: Int,
         ) {
             if (items.isNotEmpty()) {
                 val item = items.first()
-                val configs = item.configs()
+                val (contentAlignment) = item.configs
                 val isVisible = item.state.isVisible
                 val param = params[index]
                 val nextItems = items.drop(1)
 
                 val nextItemsParams = params.drop(index + 1)
-                val blur = nextItemsParams.map { it.blur.value }.sum().dp
-                val scale = nextItemsParams
-                    .map { it.scale }
-                    .reduceOrNull { acc, num -> acc * num } ?: 1f
+                val blurValues = nextItemsParams.map { it.blur.value }
+                val scaleValues = nextItemsParams.map { it.scale }
+                val blur = remember(blurValues) { blurValues.sum().dp }
+                val scale = remember(scaleValues) {
+                    scaleValues.reduceOrNull { acc, num -> acc * num } ?: 1f
+                }
 
                 LaunchedEffect(index) {
                     item.state.indexInStack = index
@@ -85,7 +87,7 @@ fun ProvideModalComponentHost(
                             .matchParentSize()
                             .blur(blur)
                             .scale(scale),
-                        contentAlignment = configs.contentAlignment
+                        contentAlignment = contentAlignment
                     ) {
                         Spacer(
                             modifier = Modifier
@@ -104,7 +106,7 @@ fun ProvideModalComponentHost(
                                 )
                         )
 
-                        if(isVisible) {
+                        if (isVisible) {
                             BackHandler(item.dismissOnBackPress) {
                                 item.onDismissRequest.invoke()
                             }
