@@ -17,9 +17,7 @@ A flexible and customizable modal component library for Compose Multiplatform wi
 
 ## Preview
 
-<p align="center">
-  <img src="media/preview.gif" alt="Modal Component Demo" width="300"/>
-</p>
+![Modal Preview](media/preview.gif)
 
 ## Features
 
