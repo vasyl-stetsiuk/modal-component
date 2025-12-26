@@ -5,6 +5,22 @@ A flexible and customizable modal component library for Compose Multiplatform wi
 [![Maven Central](https://img.shields.io/maven-central/v/dev.stetsiuk/compose-modal.svg)](https://search.maven.org/artifact/dev.stetsiuk/compose-modal)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+## Platform Support
+
+| Platform | Status |
+|----------|--------|
+| Android  | ✅ Supported |
+| iOS      | ✅ Supported (arm64, x64, simulatorArm64) |
+| Desktop  | ✅ Supported (JVM) |
+| Web (JS) | ✅ Supported |
+| WebAssembly | ✅ Supported |
+
+## Preview
+
+<p align="center">
+  <img src="media/preview.gif" alt="Modal Component Demo" width="300"/>
+</p>
+
 ## Features
 
 - **Multiplatform Support**: Works seamlessly across Android, iOS, Desktop, Web (JS), and WebAssembly
@@ -38,10 +54,10 @@ kotlin {
 @Composable
 fun App() {
     ProvideModalComponentHost {
-        // Your app content
         val modalState = rememberModalComponentState()
         val scope = rememberCoroutineScope()
-        
+
+        // Your app content
         Column {
             Text("Main Content")
             Button(onClick = { scope.launch { modalState.show() } }) {
@@ -66,10 +82,10 @@ fun App() {
 @Composable
 fun BottomSheetExample() {
     ProvideModalComponentHost {
-        // Your content here
         val state = rememberModalComponentState(initialVisibilityRatio = 0f)
         val scope = rememberCoroutineScope()
-        
+
+        // Your content here
         MyAppContent()
 
         ModalComponent(
@@ -283,16 +299,6 @@ Slider(
     onValueChange = { scope.launch { state.snapTo(it) } }
 )
 ```
-
-## Platform Support
-
-| Platform | Status |
-|----------|--------|
-| Android  | ✅ Supported |
-| iOS      | ✅ Supported (arm64, x64, simulatorArm64) |
-| Desktop  | ✅ Supported (JVM) |
-| Web (JS) | ✅ Supported |
-| WebAssembly | ✅ Supported |
 
 ## Requirements
 
