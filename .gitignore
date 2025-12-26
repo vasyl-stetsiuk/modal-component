@@ -25,9 +25,7 @@ out/
 
 # Local configuration
 local.properties
-
-# Secrets
-secrets.properties
+gradle.properties
 
 # Eclipse project files
 .classpath
@@ -74,16 +72,9 @@ workspace.xml
 **/test-results/
 **/androidTest-results/
 
-# Ignore crash reports
-**/crashlytics/
-
 # Ignore NDK intermediate files
 obj/
 *.so
-
-# Firebase/Google Services
-# google-services.json
-firebase/
 
 # Fastlane metadata
 fastlane/report.xml
@@ -95,8 +86,25 @@ fastlane/metadata/
 # Kotlin temporary files (excluding build.gradle.kts)
 *.kts~
 
-# Database schemas
-/core/database/schemas/
-
 # Kotlin
 .kotlin
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+output.json
+
+# IntelliJ
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
