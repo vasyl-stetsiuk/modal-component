@@ -26,14 +26,13 @@ kotlin {
         }
     }
 
-    // Temporarily disabled due to binaryen dependency issues
-    // js(IR) {
-    //     browser()
-    // }
+    js(IR) {
+        browser()
+    }
 
-    // wasmJs {
-    //     browser()
-    // }
+    wasmJs {
+        browser()
+    }
 
     iosArm64()
     iosX64()
@@ -47,12 +46,12 @@ kotlin {
         val desktopMain by getting {
             dependencies {}
         }
-        // val jsMain by getting {
-        //     dependencies {}
-        // }
-        // val wasmJsMain by getting {
-        //     dependencies {}
-        // }
+        val jsMain by getting {
+            dependencies {}
+        }
+        val wasmJsMain by getting {
+            dependencies {}
+        }
         iosMain.dependencies {}
         commonMain.dependencies {
 
