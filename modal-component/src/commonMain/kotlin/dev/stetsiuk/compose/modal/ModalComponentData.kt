@@ -30,7 +30,7 @@ data class ModalComponentHostConfig(
                 contentAlignment = Alignment.BottomCenter,
                 backgroundBlur = 12.dp,
                 backgroundTint = Color.Black.copy(0.1f),
-                backgroundScaleRatio = 1.05f,
+                backgroundScaleRatio = 0.95f,
             )
         }
     }
