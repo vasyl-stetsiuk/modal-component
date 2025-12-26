@@ -110,7 +110,7 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates("dev.stetsiuk", "compose-modal", "1.0.1")
+    coordinates("dev.stetsiuk", "compose-modal", "1.0.2")
 
     pom {
         name = "Modal"
