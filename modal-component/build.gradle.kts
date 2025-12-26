@@ -110,11 +110,11 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates("dev.stetsiuk", "compose-modal", "1.0.0")
+    coordinates("dev.stetsiuk", "compose-modal", "1.0.1")
 
     pom {
         name = "Modal"
-//        description = ""
+        description = "A flexible and customizable modal component library for Compose Multiplatform with support for Android, iOS, Desktop, Web (JS), and WebAssembly"
         url = "https://github.com/vasyl-stetsiuk/modal-component"
         inceptionYear = "2024"
         licenses {
